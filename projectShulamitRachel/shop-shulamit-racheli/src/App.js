@@ -7,16 +7,13 @@ import HomePage from './components/HomePage';
 import ProductsPage from './components/ProductsPage';
 import PaymentPage from './components/PaymentPage';
 import MyBasketPage from './components/MyBasketPage';
+import Top from './components/Top';
 
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to = "/products">products</Link>
-        <Link to = "/payment">payment</Link>
-        <Link to = "/my-basket">my-basket</Link>
-        <Link to = "/">home</Link>
-      </nav>
+      <Top></Top>
+      
       <Routes>
         <Route path = "/products" element = {<ProductsPage />} />
         <Route path = "/payment" element = {<PaymentPage />} />

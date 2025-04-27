@@ -1,6 +1,7 @@
 import React ,{useState} from 'react';
 import Item from './Item';
 import ProductDescriptionPage from './ProductDescriptionPage';
+import '../css/ProductsPage.css';
 import img1 from '../images/שקופית1.png';
 import img2 from '../images/שקופית2.png';
 import img3 from '../images/שקופית3.png';
@@ -30,11 +31,14 @@ const ProductsPage = () => {
     ];
 
     const nameProducts = [
-        "מוצר 1", "מוצר 2", "מוצר 3", "מוצר 4", "מוצר 5",
-        "מוצר 6", "מוצר 7", "מוצר 8", "מוצר 9", "מוצר 10",
-        "מוצר 11", "מוצר 12", "מוצר 13", "מוצר 14", "מוצר 15",
-        "מוצר 16", "מוצר 17", "מוצר 18", "מוצר 19", "מוצר 20",
-        "מוצר 21"
+        'גינת חלומות – פסיפס פרחים צבעוני לתלייה על קיר חוץ/פנים', 'המוציא לחם מן הארץ – קרש חלה לשבת בפסיפס בעבודת יד', 
+        "צב פסיפס צבעוני – פסל גינה בעבודת יד", "יער מתעורר – פסיפס בעבודת יד", "כל בכור בניך תפדה",
+        "רחוב בנחלאות – חיבור של אבן, צבע ואור", "בית קטן בירוק", "שער אדום", "סמטאות בזכוכית", 
+        "שעון קיר דקורטיבי בעבודת פסיפס זכוכית – עיצוב פרחוני",'אגרת הרמב"ן – מסגרת של חכמה ואור', 
+        "שדה פריחה על מראת עולם – משחק של חיים והשתקפות", "זר פריחה מעוטרת באגרטל מתכתי – מחווה לטבע באסתטיקה ביתית", 
+        "שושנה באבן – הרמוניה של קו, חומר וטבע", "פונקציה בפסיפס – חגיגה של צבע, תבנית ותכלית", 
+        "לוח פסיפס פרחוני – בעבודת יד מחומרי חרס אבן וזכוכית", "קופסה של אור – מנדלה בפסיפס", "ציפורי הבוקר – פסיפס של שלווה", 
+        "שיחת שחר בין סלעים", "שיח צפצופים","שולחן גן פרחוני"
     ];
 
     const pricesProducts = [
@@ -65,7 +69,7 @@ const ProductsPage = () => {
     };
 
     return (
-        <div>
+        <div className='products-container'>
             {selectedProduct ? (
                 <ProductDescriptionPage 
                     imageUrl={selectedProduct.imageUrl} 
@@ -75,8 +79,8 @@ const ProductsPage = () => {
                 />
             ) : (
                 <>
-                    <h1>Products</h1>
-                    <h2>החנות שלנו</h2>
+                    {/* <h1>Products</h1>
+                    <h2>החנות שלנו</h2> */}
                     {imagePaths.map((path, index) => (
                         <div key={index} onClick={() => handleItemClick(index)}>
                             <Item 

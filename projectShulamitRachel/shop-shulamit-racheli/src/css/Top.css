@@ -84,6 +84,11 @@
   
     .hamburger {
       display: block;
+      color: #EF7862;
+    }
+
+    .pass-link{
+      display: none;
     }
   }
   

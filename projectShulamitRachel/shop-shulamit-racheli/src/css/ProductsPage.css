@@ -1,0 +1,19 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row; /* Ensures inner tags are stacked in rows */
+    align-items: center; /* Centers inner tags horizontally */
+}
+
+.product-item {
+    flex: 1 1 calc(25% - 20px); /* Adjusts to 4 items per row with a gap */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensures inner tags are stacked in rows */
+    align-items: center; /* Centers inner tags horizontally */
+}

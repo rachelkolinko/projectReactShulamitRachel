@@ -1,0 +1,22 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 3px double #089E83; /* Replace #000 with your desired color */
+    width: 300px; /* Set a fixed width for the item */
+    height: 450px; 
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.item h2{
+    font-size: 1em;
+    margin: 10px 0;
+}

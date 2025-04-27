@@ -1,0 +1,17 @@
+.imgFooter{
+    display: block;
+}
+
+.imgFooterMobile {
+    display: none;
+}
+
+@media (max-width: 725px) {
+    .imgFooter{
+        display: none;
+    }
+    
+    .imgFooterMobile {
+        display: block;
+    }
+}

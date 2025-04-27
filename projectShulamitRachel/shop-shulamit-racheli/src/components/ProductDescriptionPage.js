@@ -1,17 +1,17 @@
 import React from 'react';
 
-const ProductDescriptionPage = ({ product }) => {
-    if (!product) {
+const ProductDescriptionPage = (props) => {
+    if (!props) {
         return <div>Loading...</div>;
     }
 
     return (
         <div className="product-description-page">
-            <h1>{product.name}</h1>
-            <img src={product.image} alt={product.name} />
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
-            <button>Add to Cart</button>
+            <h1>{props.title}</h1>
+            <img src={props.imageUrl} alt="Product" />
+            <p>{props.description}</p>
+            <p>Price: {props.price}</p>
+            <button>הוספה לסל</button>
         </div>
     );
 };

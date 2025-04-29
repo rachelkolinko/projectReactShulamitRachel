@@ -1,63 +1,47 @@
-import React from 'react';
-import TerminationNoticePage from './TerminationNoticePage';
-import { useNavigate } from 'react-router-dom';
-function PaymentPage() {
-    const navigate = useNavigate();
-    const handlePayment = () => {
-        // Add payment handling logic here
-        navigate('/termination');
-        // alert('תשלום בוצע בהצלחה!');
-    };
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/paymentPage.css';
 
-    // onSubmit={(e) => {
-    //     e.preventDefault();
-    //     handlePayment();
-    // }}
+const PaymentPage = () => {
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    address: '',
+    cardNumber: '',
+    expiry: '',
+    cvv: '',
+  });
 
-    const isFormValid = () => {
-        const cardNumber = document.querySelector('input[placeholder="1234 5678 9012 3456"]').value;
-        const expiryDate = document.querySelector('input[placeholder="MM/YY"]').value;
-        const cvv = document.querySelector('input[placeholder="123"]').value;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
+  };
 
-        return cardNumber && expiryDate && cvv;
-    };
+  const isFormValid = Object.values(form).every((value) => value.trim() !== '');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (isFormValid()) {
-            handlePayment();
-        } else {
-            alert('אנא מלא את כל השדות!');
-        }
-    };
+  return (
+    <div className="payment-container">
+      <h1 className="payment-title">דף תשלום</h1>
+      <form className="payment-form">
+        <input className="payment-input" name="firstName" placeholder="שם פרטי" onChange={handleChange} />
+        <input className="payment-input" name="lastName" placeholder="שם משפחה" onChange={handleChange} />
+        <input className="payment-input" name="email" placeholder="כתובת דוא״ל" onChange={handleChange} />
+        <input className="payment-input" name="address" placeholder="כתובת" onChange={handleChange} />
+        <input className="payment-input" name="cardNumber" placeholder="מספר כרטיס" onChange={handleChange} />
+        <input className="payment-input" name="expiry" placeholder="תוקף" onChange={handleChange} />
+        <input className="payment-input" name="cvv" placeholder="CVV" onChange={handleChange} />
 
-    return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>דף התשלום</h1>
-            <p>:אנא הזן את פרטי התשלום שלך למטה</p>
-            <form onSubmit={handleSubmit}>
-                <div style={{ marginBottom: '10px' }}>
-                    <label>
-                        <input type="text" placeholder="1234 5678 9012 3456" required />
-                        :מספר כרטיס
-                    </label>
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label>
-                        <input type="text" placeholder="MM/YY" required />
-                        :תוקף
-                    </label>
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label>
-                        <input type="text" placeholder="123" required />
-                        :CVV
-                    </label>
-                </div>
-                <button type="submit" onClick={handlePayment}>בצע הזמנה</button>
-            </form>
-        </div>
-    );
+        {isFormValid ? (
+          <Link to="/confirmation">
+            <button type="button" className="payment-button">בצע הזמנה</button>
+          </Link>
+        ) : (
+          <button type="button" className="payment-button" disabled>יש למלא את כל השדות</button>
+        )}
+      </form>
+    </div>
+  );
 };
 
 export default PaymentPage;

@@ -17,3 +17,7 @@
     flex-direction: column; /* Ensures inner tags are stacked in rows */
     align-items: center; /* Centers inner tags horizontally */
 }
+
+.br {
+    height: 500px; /* Adjust this value to set the height of the break line */
+}

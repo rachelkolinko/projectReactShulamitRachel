@@ -1,95 +1,94 @@
 .top-nav {
-    background-color: #111;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    flex-direction: row;
-    height: 100px;
-    justify-content: space-between;;
-    width: 100%;  
-  }
-  
-  .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    height: 120px;
-    margin-right: 5%;
-  }
-  
-  #logoNav {
-    height: 100%;
-    width: auto;
-  }
+  background-color: #111;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;;
+  width: 100%;  
+}
 
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 120px;
+  margin-right: 5%;
+}
+
+#logoNav {
+  height: 100%;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+  margin-left: 10%;
+  flex-direction: row-reverse;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #EF7862;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F7AC39;
+}
+
+.pass-link {
+  font-size: 400%;
+  color: #EF7862;
+  font-weight: 100;
+  margin-top: -2.2%;
+  /* transition: color 0.3s; */
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* מסכים קטנים */
+@media (max-width: 725px) {
   .nav-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    width: 70%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
     align-items: center;
-    margin-left: 10%;
-    flex-direction: row-reverse;
-  }
-  
-  .nav-link {
-    font-size: 1.5rem;
-    color: #EF7862;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #F7AC39;
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
   }
 
-  .pass-link {
-    font-size: 400%;
-    color: #EF7862;
-    font-weight: 100;
-    margin-top: -2.2%;
-    /* transition: color 0.3s; */
+  .nav-links.open {
+    display: flex;
   }
 
   .hamburger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
+    display: block;
+    color: #EF7862;
   }
-  
-  /* מסכים קטנים */
-  @media (max-width: 725px) {
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #111;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      display: none;
-    }
-  
-    .nav-links.open {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-      color: #EF7862;
-    }
 
-    .pass-link{
-      display: none;
-    }
+  .pass-link{
+    display: none;
   }
-  
+}

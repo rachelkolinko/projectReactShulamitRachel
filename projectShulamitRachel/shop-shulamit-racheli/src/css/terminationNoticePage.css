@@ -1,0 +1,51 @@
+/* PaymentSuccessMessage.css */
+.payment-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #FFF8F0; /* בהיר ונעים, גוון מואר של #F7AC39 */
+    font-family: 'Varela Round', sans-serif;
+    direction: rtl;
+  }
+  
+  .payment-success-card {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .title {
+    font-size: 32px;
+    color: #F7AC39; /* צבע ראשי חמים */
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    color: #7A7A79; /* אפור מעודן */
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    font-size: 18px;
+    color: #7A7A79; /* ירוק טורקיזי מרענן */
+    margin-bottom: 8px;
+  }
+  
+  .thanks {
+    font-size: 18px;
+    color: #EF7862; /* ורוד עז */
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

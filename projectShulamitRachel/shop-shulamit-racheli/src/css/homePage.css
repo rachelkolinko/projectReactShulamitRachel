@@ -1,5 +1,7 @@
 /* homePage.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 :root {
     --orange: #f7ac39;
     --dark-orange: #e89b2e;
@@ -15,14 +17,17 @@
   body {
     margin: 0;
     font-family: 'Varela Round', sans-serif;
-    background-color: var(--background);
     color: var(--gray);
     direction: rtl;
+    background: url('../images/IMG_6985.png') center/cover no-repeat fixed;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.8);
+
   }
   
   .landing-wrapper {
-    padding: 20px;
-    max-width: 1200px;
+    /* padding: 20px; */
+    width: 100%;
     margin: auto;
   }
   
@@ -31,7 +36,7 @@
     background: linear-gradient(135deg, var(--orange), var(--light-red));
     color: white;
     padding: 40px 20px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
   
   .landing-title {
@@ -48,8 +53,9 @@
     margin: 40px 0;
     padding: 30px;
     background-color: white;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    width: 100%;
   }
   
   .section-title {
@@ -77,14 +83,19 @@
   }
   
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   
   .gallery-img {
-    width: 100%;
-    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    /* border-radius: 10px; */
     border: 2px solid var(--light-green);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
@@ -122,9 +133,20 @@
   
   /* אזור שמתאים להכניס בו רקע עם תמונה */
   .landing-about {
-    background: url('../images/IMG_6985.png') center/cover no-repeat;
+    /* background: url('../images/IMG_6985.png') center/cover no-repeat; */
     background-blend-mode: lighten;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255);
+  }
+
+  .intermediate-sentences{
+    font-size: 32px;
+    line-height: 1.5;
+    color: var(--orange);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255, );
+    font-family: 'Varela Round';
   }
   
   @media (max-width: 768px) {
@@ -139,3 +161,19 @@
     }
   }
   
+
+/* Ensure no horizontal overflow */
+body {
+    overflow-x: hidden;
+}
+
+.landing-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* .gallery-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+} */

@@ -1,27 +1,31 @@
 import React from 'react';
 import '../css/floor.css'; // Adjust the path as necessary
 import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa'; // Importing icons from react-icons
-import imgFooter from '../images/מצגת1.png'; // Importing the footer image
 const Floor = () => {
     return (
         <footer class="footer">
           <div class="footer-menu">
-            <a href="#">חנות</a>
-            <a href="#">מוצרי ריביירה</a>
-            <a href="#">בלוג</a>
-            <a href="#">מי אנחנו</a>
-            <a href="#">תקנון</a>
-            <a href="#">תנאי משלוחים</a>
-            <a href="#">החשבון שלי</a>
-            <a href="#">צור קשר</a>
+            <a href="">חנות</a>
+            <div className="pass-links">|</div>
+            <a href="">בלוג</a>
+            <div className="pass-links">|</div>
+            <a href="">מי אנחנו</a>
+            <div className="pass-links">|</div>
+            <a href="">תקנון</a>
+            <div className="pass-links">|</div>
+            <a href="">תנאי משלוחים</a>
+            <div className="pass-links">|</div>
+            <a href="">החשבון שלי</a>
+            <div className="pass-links">|</div>
+            <a href="">צור קשר</a>
           </div>
           <div id='line-white'></div>
           <div class="footer-content">
             <div class="footer-section visit-us">
               <h3>בקרו אותנו</h3>
-              <p>שדרות ירושלים 9</p>
-              <p>רמת גן 5238105</p>
-              <p>* יש לתאם הגעה</p>
+              <p>יהודה הנשיא 13</p>
+              <p>מודיעין עילית</p>
+              <p>* יש לתאם הגעה מראש</p>
             </div>
 
             <div className="footer-center">
@@ -41,8 +45,9 @@ const Floor = () => {
 
             <div class="footer-section contact-us">
               <h3>צרו קשר</h3>
-              <p>טלפון: 1-700-55-22-44 📞</p>
-              <p> מייל: info@rivierahair.com ✉️</p>
+              <p>טלפון: 058-324-8325 📞</p>
+              <p> מייל: sara.psifas@gmail.com ✉️</p>
+              <p></p>
             </div>
           </div>
 

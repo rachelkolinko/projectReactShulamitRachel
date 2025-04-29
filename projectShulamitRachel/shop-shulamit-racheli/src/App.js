@@ -37,6 +37,8 @@ function App() {
 
             </Routes>
           </div>
+          <br />
+          <br />
           <Floor />
       
     </BrowserRouter></Provider>

@@ -14,7 +14,7 @@ function Item(props) {
         <img src={props.imageUrl} alt="תמונה" />
         <h2>{props.title}</h2>
         <p>{props.price}</p>
-        <button onClick={() => dispatch(addToBasket())}>הוספה לסל</button>
+        <button onClick={() => dispatch(addToBasket())} className='add-to-cart-btn'>הוספה לסל</button>
       </div>
     );
   }

@@ -1,0 +1,141 @@
+/* homePage.css */
+
+:root {
+    --orange: #f7ac39;
+    --dark-orange: #e89b2e;
+    --red: #ef7862;
+    --light-red: #f59984;
+    --green: #089e83;
+    --light-green: #22b89e;
+    --gray: #7a7a79;
+    --light-gray: #a5a5a5;
+    --background: #fff9f4;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    background-color: var(--background);
+    color: var(--gray);
+    direction: rtl;
+  }
+  
+  .landing-wrapper {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .landing-header {
+    text-align: center;
+    background: linear-gradient(135deg, var(--orange), var(--light-red));
+    color: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+  
+  .landing-title {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .landing-subtitle {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  
+  .landing-section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+  
+  .section-title {
+    font-size: 1.8em;
+    color: var(--green);
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .section-text,
+  .productsType,
+  .recommendation-text,
+  .highlight-list li,
+  .process-list li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+  
+  .productsType::before {
+    content: '• ';
+    color: var(--orange);
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--light-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .recommendation-grid {
+    background-color: var(--background);
+    border-left: 5px solid var(--red);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .recommendation-text {
+    font-style: italic;
+  }
+  
+  .process-list li,
+  .highlight-list li {
+    margin-bottom: 8px;
+    padding-right: 20px;
+    position: relative;
+  }
+  
+  .process-list li::before,
+  .highlight-list li::before {
+    content: '✔';
+    color: var(--green);
+    position: absolute;
+    right: 0;
+  }
+  
+  .landing-highlight h2 {
+    color: var(--red);
+  }
+  
+  /* אזור שמתאים להכניס בו רקע עם תמונה */
+  .landing-about {
+    background: url('../images/IMG_6985.png') center/cover no-repeat;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  @media (max-width: 768px) {
+    .landing-header {
+      padding: 30px 10px;
+    }
+    .landing-title {
+      font-size: 1.8em;
+    }
+    .section-title {
+      font-size: 1.4em;
+    }
+  }
+  

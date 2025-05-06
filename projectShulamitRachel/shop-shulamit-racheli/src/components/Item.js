@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/Item.css';
 import '../css/ProductsPage.css';
 import { useDispatch , useSelector} from 'react-redux';
-import { addToBasket , removeFromBasket} from '../redux/actions.js';
 import { addToCart } from '../actions/cartActions';
 import { decreaseProductQuantity } from '../actions/productActions';
 

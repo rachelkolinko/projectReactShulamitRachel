@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/paymentPage.css';
+import { useSelector } from 'react-redux';
 
 const PaymentPage = () => {
+  const cart = useSelector(state => state.cartState.cart);
+
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -19,10 +22,11 @@ const PaymentPage = () => {
   };
 
   const isFormValid = Object.values(form).every((value) => value.trim() !== '');
-
+  const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
   return (
     <div className="payment-container">
       <h1 className="payment-title">דף תשלום</h1>
+      <h3>סה"כ לתשלום: ₪{total}</h3>
       <form className="payment-form">
         <input className="payment-input" name="firstName" placeholder="שם פרטי" onChange={handleChange} />
         <input className="payment-input" name="lastName" placeholder="שם משפחה" onChange={handleChange} />

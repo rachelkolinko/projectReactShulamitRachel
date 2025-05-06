@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/top.css';
+import '../css/Top.css';
 import logo from '../images/לוגו רקע שקוף (1).png';
 
 const Top = () => {

@@ -1,11 +1,9 @@
 import React from 'react';
-
+import Cart from './Cart';
 const MyBasketPage = () => {
     return (
         <div>
-            <h1>My Basket</h1>
-            <p>Your selected items will appear here.</p>
-            {/* Add your basket items and functionality here */}
+            <Cart />
         </div>
     );
 };

@@ -13,39 +13,40 @@ import img9 from '../images/IMG_6965.png';
 const HomePage = () => {
     return (
         <div className="landing-wrapper">
-            <div className="landing-section landing-header">
+            <div className="landing-section landing-header" id='title'>
                 <h1 className="landing-title">ברוכים הבאים לאתר שלי - שרה קצבורג</h1>
                 <p className="landing-subtitle">פסיפס של חלומות</p>
             </div>
         
-            <p className="intermediate-sentences">"פסיפס של צבע, לב וידיים – יצירות בעבודת יד שמכניסות שמחה לכל חלל"</p>
+            <p className="intermediate-sentences">"הסטודיו שלי הוא מקום של שקט, אבל כל יצירה בו מלאה חיים"</p>
 
             <div className="landing-section landing-about">
                 <h2 className="section-title">קצת עלי</h2>
-                <p className="section-text">אני יוצרת באהבה פסיפסים צבעוניים וייחודיים, מתוך חיבור עמוק לחומר, לצבע ולצורה. הסטודיו שלי הוא מקום של השראה, ביטוי אישי וחוויה יצירתית – ואני מזמינה אתכם להצטרף.</p>
-                <p className="section-text"> אני מאמינה שהאמנות היא שפה אוניברסלית, שמחברת בין אנשים ובין תרבויות. כל עבודה שלי היא סיפור – סיפור של צבעים, צורות וחומרים, שמתחברים יחד ליצירה אחת שלמה. </p>
-                <p className="section-text">הפסיפס שלי הוא לא רק טכניקת אמנות, אלא גם דרך חיים: הוא מלמד אותנו לקבל את השונה והלא מושלם, ולראות את היופי שבכל פרט ופרט. </p>
-                <p className="section-text">במהלך השנה אני מקיימת קבוצות קבועות וסדנאות חד-פעמיות למבוגרים, לנוער וגם לאירועים פרטיים או ימי גיבוש. כל מפגש הוא הזדמנות לעצור את השגרה, לגעת ביצירה וליהנות מהתהליך.</p>
-                <p className="section-text">בנוסף, אני יוצרת ומוכרת עבודות פסיפס בעבודת יד – כל אחת מהן נולדת מתוך רעיון, השראה ומשיכה גדולה לאמנות.</p>
-                <p className="section-text">אם אתם מחפשים חוויה משמעותית, מתנה מקורית או פשוט זמן לעצמכם – אתם מוזמנים לסטודיו שלי.</p>
-                <p className="section-text">אני מזמינה אתכם ליצור קשר, לבוא לבקר ולהתנסות ביצירה.</p>
-                <p className="section-text">אני כאן בשבילכם, עם המון אהבה, סבלנות וידע.</p>
+                <p className="section-text">שלום, אני שרה קצבורג, אומנית, בעלת סטודיו לפסיפס בלב מודיעין עילית.</p>
+                <p className="section-text">אני יוצרת בעבודת יד פסיפסים צבעוניים ומקוריים – כל יצירה היא שילוב של השראה, חומר, וצבע.                </p>
+                <p className="section-text"> בסטודיו שלי תמצאו מקום של יצירה, חיבור וקסם, שמתאים גם למי שמעולם לא נגע באמנות.</p>
+                <p className="section-text"> אני מזמינה אתכם להצטרף לסדנאות, קבוצות קבועות או מפגשים חד-פעמיים – למבוגרים, נוער, ימי גיבוש ואירועים.                </p>
+                <p className="section-text"> הפסיפס הוא לא רק אמנות – זו דרך להתחבר, לעצור רגע, וליהנות מהתהליך.</p>
+                <p className="section-text">רוצים חוויה אחרת? זמן לעצמכם? מתנה עם ערך?  </p>
+                <p className="section-text">הסטודיו שלי פתוח בשבילכם – באהבה, סבלנות והמון ניסיון.</p>
             </div>
         
-            <p className="intermediate-sentences">"כל פריט נוצר באהבה, בשקט של הסטודיו, ומגיע אליכם עם המון אופי וייחודיות"</p>
+            <p className="intermediate-sentences">"הפסיפס הוא כמו מסע – לפעמים רק בסוף רואים איך הכול התחבר"</p>
 
             <div className="landing-section landing-products">
                 <h2 className="section-title">מה אני מכינה</h2>
-                <p className="productsType">🖼️ קישוטי קיר</p>
-                <p className="productsType">🍲 בסיסים לסירים</p>
-                <p className="productsType">🌳 פסלים לגינה</p>
-                <p className="productsType">🪴 עציצים</p>
-                <p className="productsType">💡 גופי תאורה</p>
-                <p className="productsType">🍕 מגשים לאוכל</p>
-                <p className="productsType">ועוד המון המון דברים נוספים...</p>
+                <div>
+                    <p className="productsType">🧩 <strong><em>פסיפסים בעבודת יד</em></strong> – כל אחד מהם הוא יצירת אמנות</p>
+                    <p className="productsType">🖼️ <strong><em>קישוטי קיר</em></strong> – צבעוניים, ייחודיים ומלאי אופי</p>
+                    <p className="productsType">🥘 <strong><em>בסיסים לסירים</em></strong> – שכל שולחן היה רוצה</p>
+                    <p className="productsType">🪴 <strong><em>עציצים מעוצבים</em></strong> – מתנה מושלמת לעצמך או לחבר</p>
+                    <p className="productsType">💡 <strong><em>גופי תאורה</em></strong> – שעושים אור גם בלב</p>
+                    <p className="productsType">🍕 <strong><em>מגשים לאוכל</em></strong> – שהאוכל יוגש עם סטייל</p>
+                    <p className="productsType">✨ ועוד המון הפתעות קטנות וצבעוניות – כל אחת שונה, כל אחת עם סיפור...</p>
+                </div>
             </div>
 
-            <p className="intermediate-sentences">"הפסיפס – אמנות של רסיסים – הופך כאן לסיפור שלם: צבעוני, מרגש ומלא חיים"</p>
+            <p className="intermediate-sentences">"הפסיפס לימד אותי סבלנות, גמישות, ואמונה בזה שגם מהשברים אפשר לבנות משהו שלם"</p>
 
             <div className="landing-section landing-gallery">
                 <h2 className="section-title">עבודות שעשיתי בעבר</h2>
@@ -62,55 +63,61 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <p className="intermediate-sentences">"כל פסיפס הוא פיסה מהלב שלי ותודה שאתן חלק מהמסע"</p>
+            <p className="intermediate-sentences">"אני מוצאת יופי דווקא בשברים – משם מגיע הריפוי האמיתי"</p>
 
             <div className="landing-section landing-recommendations">
                 <h2 className="section-title">המלצות עלי</h2>
-                <div className="recommendation-grid">
-                    <p className="recommendation-text">"שרה היא אמנית מדהימה! כל עבודה שלה היא יצירת אמנות בפני עצמה. אני ממליצה בחום!"</p>
-                    <p>פנינה</p>
-                </div>
-                <div className="recommendation-grid">
-                <p className="recommendation-text">"הסדנאות של שרה הן חוויה בלתי נשכחת. אני לא מפסיקה לחזור!"</p>
-                    <p>מירה</p>
-                </div>
-                <div className="recommendation-grid">
-                <p className="recommendation-text">"הסטודיו של שרה הוא מקום קסום. אני ממליצה לכל אחד לבקר!"</p>
-                    <p>יעל</p>
-                </div>
-                <div className="recommendation-grid">
-                <p className="recommendation-text">"העבודות של שרה מוסיפות צבע וחיים לכל חלל. אני מאוד אוהבת את העבודה שלי!"</p>
-                    <p>יהודית</p>
-                </div>
-                <div className="recommendation-grid">
-                <p className="recommendation-text">"שרה את מדהימה! גם בתקופות הכי קשות שלי לא וותרתי על הבריחה השבועית אליך!"</p>
-                    <p>דינה</p>
-                </div>
-                <div className="recommendation-grid">
-                <p className="recommendation-text">"שרה אין עליך! יותר פסיכולוגית מאמנית. מקום לפורקן של רגשות בתוספת אומנות!"</p>
-                    <p>ברכה</p>
+                <div className="recommendations-grid">
+                    <div className='recommendations-column'>
+                        <div className="recommendation-grid">
+                        <p className="recommendation-text">"שרה אין עליך! יותר פסיכולוגית מאמנית. מקום לפורקן של רגשות בתוספת אומנות!"</p>
+                            <p>ברכה</p>
+                        </div>
+                        <div className="recommendation-grid">
+                            <p className="recommendation-text">"שרה היא אמנית מדהימה! כל עבודה שלה היא יצירת אמנות בפני עצמה. אני ממליצה בחום!"</p>
+                            <p>פנינה</p>
+                        </div>
+                        <div className="recommendation-grid">
+                        <p className="recommendation-text">"הסטודיו של שרה הוא מקום קסום. אני ממליצה לכל אחד לבקר!"</p>
+                            <p>יעל</p>
+                        </div>
+                    </div>
+                    <div className='recommendations-column'>
+                        <div className="recommendation-grid">
+                        <p className="recommendation-text">"העבודות של שרה מוסיפות צבע וחיים להכל. אני מאוד אוהבת את העבודה שלי!"</p>
+                            <p>יהודית</p>
+                        </div>
+                        <div className="recommendation-grid">
+                        <p className="recommendation-text">"שרה את מדהימה! גם בתקופות הכי קשות שלי לא וותרתי על הבריחה השבועית אליך!"</p>
+                            <p>דינה</p>
+                        </div>
+                        <div className="recommendation-grid">
+                        <p className="recommendation-text">"הסדנאות של שרה הן חוויה בלתי נשכחת. אני לא מפסיקה לחזור!"</p>
+                            <p>מירה</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         
-            <p className="intermediate-sentences">"אמנות פסיפס אישית בעבודת יד – יצירה עם נשמה"</p>
+            <p className="intermediate-sentences">"פסיפס הוא כמו החיים – מלא ניגודים, צבעים, וחתיכות שמתיישבות בדיוק איפה שצריך"</p>
 
             <div className="landing-section landing-process">
                 <h2 className="section-title">איך זה עובד?</h2>
                 <ol className="process-list">
-                    <li>בוחרים מוצר או עיצוב אישי</li>
-                    <li>יוצרים קשר איתנו לתיאום</li>
-                    <li>אנחנו יוצרים במיוחד בשבילכם</li>
+                    <li>בוחרים מוצר בעיצוב אישי</li>
+                    <li>יוצרים איתי קשר לתיאום</li>
+                    <li>אני יוצרת במיוחד בשבילכם</li>
                 </ol>
             </div>
 
-            <p className="intermediate-sentences">"עבודות פסיפס בעיצוב אישי – מתנות, קישוטים לבית ולגן, וסדנאות מותאמות"</p>
+            <p className="intermediate-sentences">"מהחלקים הלא שלמים – נולדת שלמות מסוג אחר"</p>
 
             <div className="landing-section landing-highlight">
-                <h2>שימו❤️❗</h2>
+                <h2>שימו❤️❗ כל המוצרים שנמצאים כאן באתר נמכרו כבר ולכן:</h2>
                 <ol className="highlight-list">
-                    <li>המוצרים שנמצאים כאן באתר נמכרו כבר</li>
-                    <li>אין לי יכות ליצור את העבודה שוב במדויק - יתכנו שינויי גוונים קלים עד משמעותיים בהתאם לחומרים שיש לי בסטודיו</li>
-                    <li>כל עבודה מיוצרת מחדש  - אין עבודות למכירה במלאי</li>
+                    <li>אין לי את יכולת ליצור את העבודה שוב במדויק</li>
+                    <li>יתכנו שינויי גוונים קלים עד משמעותיים בהתאם לחומרים שיש לי בסטודיו</li>
+                    <li>כל עבודה מיוצרת מחדש  - דבר שלוקח זמן</li>
                     <li>המחירים הם להשראה בלבד - אין התחייבות למחיר שבאתר</li>
                     <li>אם יש לכם איזשהו אלמט בבית שאתם רוצים לשלב בתוך העבודה - אני כאן בשבילכם🥰</li>
                 </ol>

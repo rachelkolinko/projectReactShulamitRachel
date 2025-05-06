@@ -4,6 +4,7 @@ import '../css/ProductsPage.css';
 import { useDispatch , useSelector} from 'react-redux';
 import { addToCart } from '../actions/cartActions';
 import { decreaseProductQuantity } from '../actions/productActions';
+import { Link } from 'react-router-dom';
 
 function Item({product}) {
     const dispatch = useDispatch();
@@ -20,7 +21,8 @@ function Item({product}) {
 
     return (
       <div className="item product-item" >
-        <img src={product.imageUrl} alt="תמונה" />
+        <Link to={`/product/${product.id}`}><img src={product.imageUrl} alt="תמונה" /></Link>
+        
         <h2>{product.title}</h2>
         <p>{product.price}</p>
         <button onClick={() => handleAddToCart(product)} className='add-to-cart-btn'>הוספה לסל</button>

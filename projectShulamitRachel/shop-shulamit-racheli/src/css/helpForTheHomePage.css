@@ -1,0 +1,70 @@
+.section-text,
+.recommendation-text,
+.highlight-list li,
+.process-list li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  /* color: var(--gray); */
+  margin-bottom: 10px;
+}
+
+.landing-section {
+  margin: 40px 0;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--orange), var(--light-red));
+  color: white;
+  padding: 40px 20px;
+  margin-top: 10px;
+  width: 100% !important;
+  border-radius: 0px !important;
+}
+
+.landing-title {
+  font-size: 2.5em;
+  /* margin: 0; */
+  margin-top: 0px;
+}
+  
+.landing-subtitle {
+  font-size: 1.3em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  text-align: center;
+  margin: 5px;
+}
+
+.process-list li,
+.highlight-list li {
+  margin-bottom: 8px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.process-list li::before,
+.highlight-list li::before {
+  content: '✔';
+  color: var(--green);
+  position: absolute;
+  right: 0;
+}
+
+.process-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

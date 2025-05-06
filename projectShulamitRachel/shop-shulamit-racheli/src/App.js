@@ -1,20 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import ProductsPage from './components/ProductsPage';
 import PaymentPage from './components/PaymentPage';
 import MyBasketPage from './components/MyBasketPage';
 import Top from './components/Top';
 import Floor from './components/Floor';
 import { Provider } from 'react-redux';
-// import store from './redux/store';
 import TerminationNoticePage from './components/TerminationNoticePage';
 import store from './store';
 import ProductList from './components/ProductList';
-import Cart from './components/Cart';
+import ProductDescriptionPage from './components/ProductDescriptionPage'
 
 
 function App() {
@@ -37,7 +34,7 @@ function App() {
               <Route path="/my-basket" element={<MyBasketPage />} />
               <Route path="/" element={<HomePage />} />
               <Route path="/termination" element={<TerminationNoticePage />} />
-
+              <Route path="/product/:id" element={<ProductDescriptionPage />} />
             </Routes>
           </div>
           <Floor />

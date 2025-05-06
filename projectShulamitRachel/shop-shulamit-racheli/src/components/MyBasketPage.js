@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, clearCart } from "../actions/cartActions";
-import { increaseQuantity } from "../actions/productActions";
+import { removeFromCart, clearCart, addToCart } from "../actions/cartActions";
+import { increaseQuantity, decreaseProductQuantity } from "../actions/productActions";
 import '../css/myBasketPage.css';
 
 export default function MyBasketPage() {
@@ -13,6 +13,11 @@ export default function MyBasketPage() {
         dispatch(increaseQuantity(item.id, 1));
       };
     
+      const handleAddOne = (item) => {
+        dispatch(addToCart(item));
+        dispatch(decreaseProductQuantity(item.id));
+      };
+
       const handleClearCart = () => {
         cart.forEach(item => {
           dispatch(increaseQuantity(item.id, item.cartQuantity));
@@ -33,8 +38,9 @@ export default function MyBasketPage() {
                     {cart.map(item => (
                         <li key={item.id}>
                             {item.title} - {item.price} ש"ח
+                            <button onClick={() => handleRemoveOne(item)}>-</button>
                             ({item.cartQuantity} כמות בסל)
-                            <button onClick={() => handleRemoveOne(item)}>הסר 1</button>
+                            <button onClick={() => handleAddOne(item)}>+</button>
                         </li>
                     ))}
                 </ul>

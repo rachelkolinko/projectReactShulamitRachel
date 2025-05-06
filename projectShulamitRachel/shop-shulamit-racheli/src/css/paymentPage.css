@@ -63,3 +63,9 @@
   .payment-button:active {
     background-color: #cc8228;
   }
+
+  .sum{
+    text-align: center;
+    font-size: 20px;
+    color: #089e83;
+  }

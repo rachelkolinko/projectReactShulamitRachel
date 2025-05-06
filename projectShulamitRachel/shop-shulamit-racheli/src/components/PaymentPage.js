@@ -26,7 +26,7 @@ const PaymentPage = () => {
   return (
     <div className="payment-container">
       <h1 className="payment-title">דף תשלום</h1>
-      <h3>סה"כ לתשלום: ₪{total}</h3>
+      <h3 className='sum'>סה"כ לתשלום: ₪{total}</h3>
       <form className="payment-form">
         <input className="payment-input" name="firstName" placeholder="שם פרטי" onChange={handleChange} />
         <input className="payment-input" name="lastName" placeholder="שם משפחה" onChange={handleChange} />

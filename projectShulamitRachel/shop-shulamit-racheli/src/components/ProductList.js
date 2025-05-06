@@ -20,18 +20,19 @@ export default function ProductList(){
     };
 
     return (
-        <div>
-            <h2>מוצרים בחנות</h2>
-            <ul>
+        <div className="products-page">
+            {/* <h2>מוצרים בחנות</h2> */}
+            {/* <div className='br'></div> */}
+            <div className="products-container">
                 {products.map(product => (
-                    <Item key={product.id}  product={product}/>
+                    <Item key={product.id}  product={product} className="item product-item"/>
                     // <li key={product.id}>
                     //     {product.name} - {product.price} ש"ח
                     //     ({product.quantity} במלאי)
                     //     <button onClick={() => handleAddToCart(product)}>הוסף לסל</button>
                     // </li>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

@@ -29,7 +29,7 @@ const cartReducer = (state = initialState, action) => {
                 item.id === action.payload
                 ? { ...item, cartQuantity: item.cartQuantity - 1}
             :item            
-            ).filter(item => item.cartQuantity > 0)
+            ).filter(item => Number(item.cartQuantity) > 0)
         };
       case 'CLEAR_CART':
         return { cart: [] };

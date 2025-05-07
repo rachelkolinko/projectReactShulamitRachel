@@ -10,7 +10,17 @@ export default function ProductList(){
     const products = useSelector(state => state.productsState.products);
     const dispatch = useDispatch();
 
-    const handleAddToCart = ({product}) => {
+
+    // const handleAddToCart = (product) => {
+    //     if (product.count > 0) {
+    //         dispatch(addToCart(product));
+    //         dispatch(decreaseProductQuantity(product.id));
+    //     } else {
+    //         alert("המוצר אזל מהמלאי");
+    //     }
+    // };
+    
+    const handleAddToCart = (product) => {
         if (product.count > 0) {
             dispatch(addToCart(product));
             dispatch(decreaseProductQuantity(product.id));
@@ -25,6 +35,8 @@ export default function ProductList(){
             {/* <div className='br'></div> */}
             <div className="products-container">
                 {products.map(product => (
+                    
+                  
                     <Item key={product.id}  product={product} className="item product-item"/>
                     // <li key={product.id}>
                     //     {product.name} - {product.price} ש"ח

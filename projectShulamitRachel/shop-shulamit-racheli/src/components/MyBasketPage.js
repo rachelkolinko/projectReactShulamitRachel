@@ -26,6 +26,7 @@ export default function MyBasketPage() {
       };
 
     const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
+    // const total = cart.reduce((sum, item) => sum + (Number(item.price) ) * (Number(item.cartQuantity) ), 0);
 
     return (
         <div className="container">
@@ -37,6 +38,7 @@ export default function MyBasketPage() {
                 <ul>
                     {cart.map(item => (
                         <li key={item.id}>
+                            
                             {item.title} - {item.price} ש"ח
                             <button onClick={() => handleRemoveOne(item)}>-</button>
                             ({item.cartQuantity} כמות בסל)

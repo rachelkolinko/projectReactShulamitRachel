@@ -26,7 +26,7 @@ function Item({product}) {
         
         <h2>{product.title}</h2>
         <p>{product.price}</p>
-        <h1>כמות במלאי: {product.count}</h1>
+        {/* <h1>כמות במלאי: {product.count}</h1> */}
         <button onClick={() => handleAddToCart(product)} className='add-to-cart-btn'>הוספה לסל</button>
       </div>
     );

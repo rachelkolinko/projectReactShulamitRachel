@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/terminationNoticePage.css'; // Import your CSS file for styling
+import '../css/terminationNoticePage.css'; 
 
 const TerminationNoticePage = () => {
     

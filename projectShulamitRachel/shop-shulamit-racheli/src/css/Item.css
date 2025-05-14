@@ -6,10 +6,10 @@
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border: 3px double #089E83; /* Replace #000 with your desired color */
-  width: 280px !important; /* Set a fixed width for the item */
+  border: 3px double #089E83; 
+  width: 280px !important; 
   height: 450px; 
-  background-color: white; /* Set a background color for the item */
+  background-color: white; 
 }
 
 .item img{
@@ -23,7 +23,7 @@
 }
 
 .add-to-cart-btn {
-    background-color: #089E83; /* כתום רך */
+    background-color: #089E83; 
     color: white;
     border: none;
     padding: 12px 24px;
@@ -36,7 +36,7 @@
   }
   
   .add-to-cart-btn:hover {
-    background-color: #F7AC39; /* כהה יותר במעבר עכבר */
+    background-color: #F7AC39; 
     transform: translateY(-2px);
   }
   

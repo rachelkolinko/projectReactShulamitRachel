@@ -1,7 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch }  from 'react-redux';
-import { addToCart } from '../actions/cartActions';
-import { decreaseProductQuantity } from '../actions/productActions';
+import { useSelector }  from 'react-redux';
 import Item from './Item';
 import '../css/ProductsPage.css';
 import '../css/Item.css';
@@ -18,31 +16,8 @@ export default function ProductList(){
     const category3 = filterProduct(products, 3);
     const category4 = filterProduct(products, 4);
 
-    // const dispatch = useDispatch();
-
-
-    // const handleAddToCart = (product) => {
-    //     if (product.count > 0) {
-    //         dispatch(addToCart(product));
-    //         dispatch(decreaseProductQuantity(product.id));
-    //     } else {
-    //         alert("המוצר אזל מהמלאי");
-    //     }
-    // };
-    
-    // const handleAddToCart = (product) => {
-    //     if (product.count > 0) {
-    //         dispatch(addToCart(product));
-    //         dispatch(decreaseProductQuantity(product.id));
-    //     } else {
-    //         alert("המוצר אזל מהמלאי");
-    //     }
-    // };
-
     return (
         <div className="products-page">
-            {/* <h2>מוצרים בחנות</h2> */}
-            {/* <div className='br'></div> */}
             <br />
             <br />
             <div className='category'>מוצרים בהזמנה אישית</div>
@@ -56,18 +31,3 @@ export default function ProductList(){
         </div>
     );
 }
-
-
-
-
-
-function filterProduct(array, threshold) {
-    return array.filter(function(number) {
-        return number > threshold;
-    });
-}
-
-// דוגמה לשימוש
-const numbers = [1, 5, 10, 15, 20];
-const result = filterProduct(numbers, 10);
-console.log(result); // פלט: [15, 20]

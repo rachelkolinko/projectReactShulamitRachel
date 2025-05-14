@@ -28,21 +28,8 @@ function Item({ product}) {
         
         <h2>{product.title}</h2>
         <p>{product.price}</p>
-        {/* <h1>כמות במלאי: {product.count}</h1> */}
         <button onClick={() => handleAddToCart(product)} className='add-to-cart-btn'>הוספה לסל</button>
       </div>
     );
   }
   export default Item;
-// import React from 'react';
-
-// export default function Item({ product, onAddToCart }) {
-//     return (
-//         <div className="item">
-//             <h3>{product.name}</h3>
-//             <p>מחיר: {product.price} ש"ח</p>
-//             <p>במלאי: {product.count}</p>
-//             <button onClick={() => onAddToCart(product)}>הוסף לסל</button>
-//         </div>
-//     );
-// }

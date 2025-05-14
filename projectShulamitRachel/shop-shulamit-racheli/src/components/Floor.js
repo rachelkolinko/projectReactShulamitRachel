@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/floor.css'; // Adjust the path as necessary
-import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa'; // Importing icons from react-icons
+import '../css/floor.css'; 
+import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa'; 
 const Floor = () => {
     return (
         <footer class="footer">
@@ -35,14 +35,6 @@ const Floor = () => {
               <i className="fab fa-facebook-f"></i>
             </div>
 
-
-            {/* <div class="footer-section social-icons">
-              <a href="#"><img src="whatsapp-icon.png" alt="Whatsapp"></a>
-              <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-              <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-              <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            </div> */}
-
             <div class="footer-section contact-us">
               <h3>צרו קשר</h3>
               <p>טלפון: 058-324-8325 📞</p>
@@ -51,10 +43,6 @@ const Floor = () => {
             </div>
           </div>
 
-          {/* <div class="footer-bottom">
-            <a href="#">עברית</a> |
-            <a href="#">العربية</a>
-          </div> */}
         </footer>
     );
 };

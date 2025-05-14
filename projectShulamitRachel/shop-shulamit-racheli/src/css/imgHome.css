@@ -1,7 +1,6 @@
 .gallery-img {
     width: 300px;
     height: auto;
-    /* border-radius: 10px; */
     border: 2px solid var(--light-green);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }

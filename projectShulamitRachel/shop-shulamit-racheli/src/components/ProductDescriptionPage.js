@@ -5,27 +5,9 @@ import { useParams } from 'react-router-dom';
 import { addToCart } from '../actions/cartActions';
 import { decreaseProductQuantity } from '../actions/productActions';
 const ProductDescriptionPage = () => {
-    // const { id } = useParams(); // שליפת ה-id מה-URL
-    // const products = useSelector(state => state.productsState.products);
-    // // const dispatch = useDispatch();
-
-    // if (!products) {
-    //     return <div>Loading...</div>;
-    // }
-
-    // return (
-    //     <div className="product-description-page">
-    //         <h1>{products.title}</h1>
-    //         <img src={products.imageUrl} alt="Product" />
-    //         <p>מחיר: {products.price}</p>
-    //         <p>{products.description}</p>
-    //         <button>הוספה לסל</button>
-    //     </div>
-    // );
-    const { id } = useParams(); // שליפת ה-id מה-URL
+    const { id } = useParams(); 
     const products = useSelector(state => state.productsState.products);
-    // const product = products.find(product => product.id === id); // מציאת המוצר לפי ה-id
-    const product = products[id - 1]; // מציאת המוצר לפי ה-id
+    const product = products[id - 1]; 
     const dispatch = useDispatch();
         const basket = useSelector((state) => state.basket);
         const handleAddToCart = (product) => {

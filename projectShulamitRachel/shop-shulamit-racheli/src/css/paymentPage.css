@@ -1,9 +1,7 @@
 .payment-container {
     padding: 50px 15px;
     direction: rtl;
-    /* background-color: #f5f7fa; */
-    /* min-height: 100vh; */
-    padding-top: 20px; /* Adjust this value to set the top padding */
+    padding-top: 20px;
   }
   
   .payment-title {

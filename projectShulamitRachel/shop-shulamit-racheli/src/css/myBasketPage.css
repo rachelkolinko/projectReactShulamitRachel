@@ -7,9 +7,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* height: 100vh; */
   font-size: 50px;
-  /* color: #ef7862; */
   color: #ef7862;
   font-family: 'Hadassah Friedlaender';
   margin: 0;
@@ -48,8 +46,6 @@
 .products-block {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: center; */
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -57,10 +53,8 @@
 .total-price {
   font-size: 24px;
   color: #000;
-  /* margin-left: 20px; */
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
@@ -70,8 +64,6 @@
 }
 
 .total-price h3 {
-  /* color: #ef7862; */
-  
   cursor: pointer;
   -webkit-text-stroke: 0.5px #ef7862;
   font-family: 'Hadassah Friedlaender';
@@ -104,12 +96,10 @@
   width: 40%;
   padding-top: 20px;
   padding-bottom: 20px;
-/* right: 250px ; */
 }
 
 .products-item {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   border: 2px solid #f7ac39;
   padding: 20px;
@@ -173,7 +163,6 @@
   }
 
   .total-price{
-    /* margin-top: 0; */
     top: 100px;
     margin-left: 0;
     margin-right: 0;

@@ -39,7 +39,8 @@ function App() {
           </div>
           <Floor />
       
-    </BrowserRouter></Provider>
+    </BrowserRouter>
+    </Provider>
     // <Provider store={store}>
     //   <div>
     //     <ProductList />

@@ -36,15 +36,12 @@ export default function MyBasketPage() {
         dispatch(clearCart());
       };
       const total = cart.reduce((sum, item) => {
-        const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
+        const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); 
         return sum + price * (item.cartQuantity || 0);
        }, 0);
-    // const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
-    // const total = cart.reduce((sum, item) => sum + (Number(item.price) ) * (Number(item.cartQuantity) ), 0);
 
     return (
         <div className="my-basket-page">
-            {/* <h2>הסל שלי</h2> */}
             {cart.length === 0 ? (
                 <div className="products-not-found">
                     <br />
@@ -80,16 +77,6 @@ export default function MyBasketPage() {
                             </li>
                         ))}
                     </ul>
-                    {/* <div className="total-price">
-                        <h3>סה"כ לתשלום: ₪{total}</h3>
-                        <Link to="/products">
-                            <button>לחצו כאן כדי להוסיף מוצרים</button>
-                        </Link>
-                        <button onClick={handleClearCart}>רוקן סל</button>
-                        <Link to="/payment">
-                            <button>לתשלום</button>
-                        </Link>
-                    </div> */}
                 </div>
             )}
         </div>

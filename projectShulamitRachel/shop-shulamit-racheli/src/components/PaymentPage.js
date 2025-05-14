@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/paymentPage.css';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
+import { increaseQuantity } from '../actions/productActions';
+import { clearCart } from '../actions/cartActions';
 
 const PaymentPage = () => {
   const cart = useSelector(state => state.cartState.cart);
+  const dispatch = useDispatch();
+
+  const handleClearCart = () => {
+    cart.forEach(item => {
+      dispatch(increaseQuantity(item.id, item.cartQuantity));
+    });
+    dispatch(clearCart());
+  };
+
 
   const [form, setForm] = useState({
     firstName: '',
@@ -23,10 +34,9 @@ const PaymentPage = () => {
 
   const isFormValid = Object.values(form).every((value) => value.trim() !== '');
   const total = cart.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
+    const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); 
     return sum + price * (item.cartQuantity || 0);
 }, 0);
-  // const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
   return (
     <div className="payment-container">
       <h1 className="payment-title">דף תשלום</h1>
@@ -42,7 +52,7 @@ const PaymentPage = () => {
 
         {isFormValid ? (
           <Link to="/termination">
-            <button type="button" className="payment-button">בצע הזמנה</button>
+            <button type="button" className="payment-button" onClick={handleClearCart}>בצע הזמנה</button>
           </Link>
         ) : (
           <button type="button" className="payment-button" disabled>יש למלא את כל השדות</button>

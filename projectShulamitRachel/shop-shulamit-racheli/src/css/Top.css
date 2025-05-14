@@ -52,7 +52,6 @@
   color: #EF7862;
   font-weight: 100;
   margin-top: -2.2%;
-  /* transition: color 0.3s; */
 }
 
 .hamburger {
@@ -65,7 +64,6 @@
   color: #EF7862;
 }
 
-/* מסכים קטנים */
 @media (max-width: 725px) {
   .nav-links {
     position: absolute;

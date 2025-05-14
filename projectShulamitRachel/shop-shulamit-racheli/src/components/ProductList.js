@@ -8,6 +8,16 @@ import '../css/Item.css';
 
 export default function ProductList(){
     const products = useSelector(state => state.productsState.products);
+    function filterProduct(products, category) {
+        return products.filter(function(product) {
+            return category == product.category;
+        });
+    }
+    const category1 = filterProduct(products, 1);
+    const category2 = filterProduct(products, 2);
+    const category3 = filterProduct(products, 3);
+    const category4 = filterProduct(products, 4);
+
     // const dispatch = useDispatch();
 
 
@@ -33,18 +43,31 @@ export default function ProductList(){
         <div className="products-page">
             {/* <h2>מוצרים בחנות</h2> */}
             {/* <div className='br'></div> */}
-            <div className="products-container">
-                {products.map(product => (
-                    
-                  
-                    <Item key={product.id}  product={product} className="item product-item"/>
-                    // <li key={product.id}>
-                    //     {product.name} - {product.price} ש"ח
-                    //     ({product.quantity} במלאי)
-                    //     <button onClick={() => handleAddToCart(product)}>הוסף לסל</button>
-                    // </li>
-                ))}
-            </div>
+            <br />
+            <br />
+            <div className='category'>מוצרים בהזמנה אישית</div>
+            <div className="products-container">{category1.map(product => (<Item key={product.id}  product={product} className="item product-item"/>))}</div>
+            <div className='category'>קישוטי קיר</div>
+            <div className="products-container">{category2.map(product => (<Item key={product.id}  product={product} className="item product-item"/>))}</div>
+            <div className='category'>מגשים לאוכל</div>
+            <div className="products-container">{category3.map(product => (<Item key={product.id}  product={product} className="item product-item"/>))}</div>
+            <div className='category'>ועוד המון הפתעות...</div>
+            <div className="products-container">{category4.map(product => (<Item key={product.id}  product={product} className="item product-item"/>))}</div>
         </div>
     );
 }
+
+
+
+
+
+function filterProduct(array, threshold) {
+    return array.filter(function(number) {
+        return number > threshold;
+    });
+}
+
+// דוגמה לשימוש
+const numbers = [1, 5, 10, 15, 20];
+const result = filterProduct(numbers, 10);
+console.log(result); // פלט: [15, 20]

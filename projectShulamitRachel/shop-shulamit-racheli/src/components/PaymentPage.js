@@ -41,7 +41,7 @@ const PaymentPage = () => {
         <input className="payment-input" name="cvv" placeholder="CVV" onChange={handleChange} />
 
         {isFormValid ? (
-          <Link to="/confirmation">
+          <Link to="/termination">
             <button type="button" className="payment-button">בצע הזמנה</button>
           </Link>
         ) : (

@@ -6,18 +6,27 @@ import '../css/myBasketPage.css';
 import { Link } from "react-router-dom";
 
 export default function MyBasketPage() {
+    const products = useSelector(state => state.productsState.products);
     const cart = useSelector(state => state.cartState.cart);
     const dispatch = useDispatch();
 
     const handleRemoveOne = (item) => {
-        dispatch(removeFromCart(item.id));
-        dispatch(increaseQuantity(item.id, 1));
+       
+            dispatch(removeFromCart(item.id));
+            dispatch(increaseQuantity(item.id));
+        
       };
     
       const handleAddOne = (item) => {
-        console.log("item", item);
+        const count = products.find(product => product.id === item.id).count;
+        if(count > 0){
         dispatch(addToCart(item));
         dispatch(decreaseProductQuantity(item.id));
+    }
+    else{
+        alert("המוצר אזל מהמלאי");
+    }
+        
       };
 
       const handleClearCart = () => {
@@ -27,9 +36,9 @@ export default function MyBasketPage() {
         dispatch(clearCart());
       };
       const total = cart.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
-    return sum + price * (item.cartQuantity || 0);
-}, 0);
+        const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
+        return sum + price * (item.cartQuantity || 0);
+       }, 0);
     // const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
     // const total = cart.reduce((sum, item) => sum + (Number(item.price) ) * (Number(item.cartQuantity) ), 0);
 
@@ -48,15 +57,15 @@ export default function MyBasketPage() {
                 </div>
             ):(
                 <div className="producst-block">
-                        <div className="total-price">
-                            <h3>סה"כ לתשלום: ₪{total}</h3>
-                            <Link to="/products">
-                                <button>לחצו כאן כדי להוסיף מוצרים</button>
-                            </Link>
-                            <button onClick={handleClearCart}>רוקן סל</button>
-                            <Link to="/payment">
-                                <button>לתשלום</button>
-                            </Link>
+                    <div className="total-price">
+                        <h3>סה"כ לתשלום: ₪{total}</h3>
+                        <Link to="/products">
+                            <button>לחצו כאן כדי להוסיף מוצרים</button>
+                        </Link>
+                        <button onClick={handleClearCart}>רוקן סל</button>
+                        <Link to="/payment">
+                            <button>לתשלום</button>
+                        </Link>
                     </div>
                     <ul className="products-list">
                         {cart.map(item => (

@@ -70,9 +70,10 @@
 }
 
 .total-price h3 {
-  color: #ef7862;
+  /* color: #ef7862; */
+  
   cursor: pointer;
-  -webkit-text-stroke: 0.5px black;
+  -webkit-text-stroke: 0.5px #ef7862;
   font-family: 'Hadassah Friedlaender';
   margin-bottom: 0;
 }
@@ -100,7 +101,7 @@
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  width: 60%;
+  width: 40%;
   padding-top: 20px;
   padding-bottom: 20px;
 /* right: 250px ; */
@@ -113,11 +114,12 @@
   border: 2px solid #f7ac39;
   padding: 20px;
   flex-direction: row;
-  width: 55%;
+  width: 100%;
   margin-right: 200px;
   background-color: white;
   border-radius: 10px;
   height: 10vh;
+  min-width: 350px;
 }
 
 .product-img {
@@ -160,4 +162,31 @@
 
 .add_minuss-product:hover {
   background-color: #ddd;
+}
+
+@media (max-width: 1250px) {
+  .producst-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .total-price{
+    /* margin-top: 0; */
+    top: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+  }
+
+  .products-list{
+    margin-top: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .products-item {
+    margin-right: 0;
+  }
 }

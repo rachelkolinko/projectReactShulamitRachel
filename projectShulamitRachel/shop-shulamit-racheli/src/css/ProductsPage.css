@@ -1,6 +1,16 @@
 .products-page {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.category {
+    background-color: #f7ac39;
+    color: white;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
 }
 
 .products-container {

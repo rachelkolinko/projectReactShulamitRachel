@@ -22,7 +22,11 @@ const PaymentPage = () => {
   };
 
   const isFormValid = Object.values(form).every((value) => value.trim() !== '');
-  const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
+  const total = cart.reduce((sum, item) => {
+    const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
+    return sum + price * (item.cartQuantity || 0);
+}, 0);
+  // const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
   return (
     <div className="payment-container">
       <h1 className="payment-title">דף תשלום</h1>

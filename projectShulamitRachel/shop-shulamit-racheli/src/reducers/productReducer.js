@@ -74,16 +74,17 @@ export default function productReducer(state = initialState, action) {
                 ...state,
                 products: state.products.map(product =>
                     product.id === action.payload
-                    ? { ...product, quantity: product.count - 1 }
+                    ? { ...product, count: product.count - 1 }
                     : product
                 )
+                
             };
         case 'INCREASE_QUANTITY':
       return {
         ...state,
         products: state.products.map(product =>
           product.id === action.payload.productId
-            ? { ...product, quantity: product.count + action.payload.amount }
+            ? { ...product, count: product.count + action.payload.amount }
             : product
         )
       };

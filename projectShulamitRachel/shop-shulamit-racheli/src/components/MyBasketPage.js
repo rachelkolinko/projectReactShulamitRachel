@@ -15,6 +15,7 @@ export default function MyBasketPage() {
       };
     
       const handleAddOne = (item) => {
+        console.log("item", item);
         dispatch(addToCart(item));
         dispatch(decreaseProductQuantity(item.id));
       };
@@ -25,8 +26,11 @@ export default function MyBasketPage() {
         });
         dispatch(clearCart());
       };
-
-    const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
+      const total = cart.reduce((sum, item) => {
+    const price = parseFloat(item.price.replace(/[^\d.-]/g, "")); // הסרת סימנים לא מספריים
+    return sum + price * (item.cartQuantity || 0);
+}, 0);
+    // const total = cart.reduce((sum, item) => sum + item.price * item.cartQuantity, 0);
     // const total = cart.reduce((sum, item) => sum + (Number(item.price) ) * (Number(item.cartQuantity) ), 0);
 
     return (
